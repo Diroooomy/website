@@ -27,8 +27,7 @@
     </script>
     <link rel="stylesheet" href="../css/index.css">
 </head>
-<?php
->
+
 <body bgcolor="black">
     <script src="https://cdn.jsdelivr.net/npm/prismjs@1.21.0/prism.min.js"></script>
     <script src="../js/vsclick.min.js"></script>
@@ -43,7 +42,7 @@
     </script>
     <div class="background"></div>
     <div class="enter">
-        <form name="form" action="../php/mainpage.php" method="POST" >
+        <form name="form" action="../php/mainpage.php" method="POST" onsubmit="return validateForm();" >
             <input class="info" type="text" id="name" name="name" placeholder=" Enter your name" maxlength="12">
             <a class="enterbtn">    
                 <input type="submit" value="" class="enterbtn">
