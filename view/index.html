@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>web </title>
+    <script src="../js/about.js"></script>
+    <script src="../js/validate.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+</head>
+<body bgcolor="black">
+
+    <script src="../js/vsclick.min.js"></script>
+    <script>
+        let drop4 = new VsClick({
+            dom: 'drop4',
+            timer: 3000,
+            spring: true,
+            height: 5,
+            width: 5
+        })
+    </script>
+    <div class="background"></div>
+    <div class="enter">
+        <form name="form" action="../controller/VisitorController.php" method="POST" onsubmit="return validateForm();" >
+            <input type="hidden" name="type" value="visit">
+            <input class="info" type="text" id="name" name="name" placeholder=" Enter your name" maxlength="12">
+            <a class="enterbtn">    
+                <input type="submit" value="" class="enterbtn">
+            </a>
+        </form>
+    </div>
+    <!--侧栏页面设计-->
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="photo"></div>
+        <p id="ani" style="font-size: 25px;color: #818181;transition: 0.5s;">HeLen</p>
+        <div style="width:25%; height:100%; position: fixed; text-align: center;">
+            <div class="text">   
+            <p>This website is editted by HeLen<br> in Ocean University of China.</p>
+            </div>
+            <div class="text">
+            <p>And this is the first official website<br> I made by myself </p>
+            </div>
+            <div class="text">
+            <p>You can see the source code<br> on my GitHub page</p>
+            </div>
+
+            <p style="font-family: 'Times New Roman', Times, serif;font-size: medium;text-align: center; border: none;">
+                <input type="image" src="../image/github.svg" onclick="window.location.href='https://github.com/Diroooomy/website'" style="width: 60px;height: 60px;">
+                View on GitHub
+            </p>
+            <p id="ani" style="font-size: 25px;color: #818181;transition: 0.5s;">Ver 1.0</p>
+        </div>
+    </div>
+    <div class="about">
+        <button class="aboutbtn" onclick="openNav()"></button>
+    </div>
+</body>
+</html>

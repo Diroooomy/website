@@ -1,0 +1,161 @@
+* {margin: 0 0 0 0;}
+.background{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ 
+    z-index: -1;
+    background: url(../image/wall.jpg) no-repeat;
+}
+/* .logo{
+    background-color: #198eee;
+    height: 80px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+    font-weight: bold;
+    margin:0 0 0 0;
+} */
+
+.open{
+    position:fixed;
+    border:none;
+    height:30px;
+    width:30px;
+    margin: 20px auto 20px 38px;
+    background:url(../image/list.svg);
+}
+.welcome{
+    height: 200px;
+    width:700px;
+    margin: 0 auto;
+}
+
+
+.list{
+    background-color: rgba(174, 185, 197, 0.781);
+    height: 80px;
+    
+}
+
+
+.sidebar{
+    height: 100px;
+}
+.person{
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    border:none;
+    display: block;
+    background: url(../image/person.svg) no-repeat center center;
+}
+.game{
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    border:none;
+    display: block;
+    background: url(../image/game.svg) no-repeat center center;
+    cursor:pointer;
+}
+.movie{
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    border:none;
+    display: block;
+    background: url(../image/movie.svg) no-repeat center center;
+    cursor:pointer;
+}
+.music{
+    height: 80px;
+    width: 80px;
+    margin: 0 auto;
+    border:none;
+    display: block;
+    background: url(../image/music.svg) no-repeat center center;
+    cursor:pointer;
+}
+.back{
+    height:80px;
+    width:80px;
+    margin:0 auto;
+    border: none;
+    background:url(../image/back.svg) no-repeat center center;
+    cursor:pointer;
+}
+.fullscreen{
+    height:250px;
+    width:80px;
+    margin: 0 auto;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    
+}
+.fullscreen button{
+    margin: 0 auto;
+    height:30px;
+    width:30px;
+    left: 50px;
+    border: none;
+    background:url(../image/fullscreen.svg) no-repeat center center;
+    cursor:pointer;
+}
+
+.sidenav {
+    opacity:0.5;
+    height: 100%;
+    width:0; /*原始宽度为0*/
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: antiquewhite;
+    overflow-x: hidden;
+    transition: 1s;
+    padding-top: 60px;
+}
+/* 
+.sidenav:hover{
+    height: 100%;
+    
+} */
+ 
+/*侧边栏选项选择器*/
+.sidenav a {
+    /* padding: 8px 8px 8px 32px; */
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.5s;
+    text-align: center;
+}
+.sidenav p{
+    font-size:18px;
+    color: rgb(209, 204, 198);
+    display: block;
+    text-align: center;
+}
+ 
+/*侧栏标签和关闭按钮光标的效果*/
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+ 
+/*侧栏和关闭按钮的位置选择器*/
+.sidenav .closebtn {
+    position: absolute;
+    right:25px;
+    bottom: 25px;
+    font-size: 36px;
+    margin-bottom: 10px;
+    
+}
+ 
+/*当文档高度小于450px时，改变侧栏的padding属性和字体大小*/
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}

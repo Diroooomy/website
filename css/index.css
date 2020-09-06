@@ -13,12 +13,14 @@
     width:100%;
     bottom: 150px;
     left: 0px;
+    
 }
 .enterbtn{
     background: url(../image/enter.svg);
     width: 55px;
     height: 55px;
     border-radius:50%;
+    
     border: none;
     display:block;
     margin:0 auto;
@@ -65,9 +67,6 @@ input:focus{
     box-shadow: inset 20PX 20px 20px rgba(0,0,0,.075),0 0 8px rgba(32, 145, 238, 0.671)
 }
 
-
-
-
 .sidenav {
     height: 100%;
     width:0; /*原始宽度为0*/
@@ -81,28 +80,6 @@ input:focus{
     padding-top: 60px;
 }
  
-/*侧边栏选项选择器*/
-.sidenav a {
-    /* padding: 8px 8px 8px 32px; */
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.5s;
-    text-align: center;
-}
-.sidenav p{
-    font-size:18px;
-    color: rgb(209, 204, 198);
-    display: block;
-    text-align: center;
-}
- 
-/*侧栏标签和关闭按钮光标的效果*/
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
- 
 /*侧栏和关闭按钮的位置选择器*/
 .sidenav .closebtn {
     position: absolute;
@@ -111,13 +88,6 @@ input:focus{
     font-size: 36px;
     margin-left: 50px;
 }
- 
-/*当文档高度小于450px时，改变侧栏的padding属性和字体大小*/
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
 .photo{
     background: url(../image/photo.png) no-repeat;
     width: 75px;
