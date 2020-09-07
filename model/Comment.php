@@ -3,7 +3,7 @@ class Comment
 {
     protected $name;
     protected $content;
-
+    protected $contact;
     function __construct($content)
     {
         $this->content=$content;
@@ -23,5 +23,13 @@ class Comment
     public function getContent()
     {
         return $this->content;
+    }
+    public function setContact($contact)
+    {
+        $this->contact=$contact;
+    }
+    public function getContact()
+    {
+        return $this->contact;
     }
 }

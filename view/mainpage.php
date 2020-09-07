@@ -26,19 +26,49 @@ include "../controller/VisitorController.php";
         })
     </script>
     <div class="list">
-    <span  style="width:90px;height:80px;">
-            <button style="height: 80px;width:120px;margin-left:20px;border:none;outline:none;background:url(../image/welcome.svg) no-repeat center center" onclick="openNav()"></button>
+        <span  style="width:90px;height:80px;">
+            <button class="logo" onclick="document.querySelector('#welcome').scrollIntoView({block:'start',behavior:'smooth'})"></button>
         </span>
         <span  style="width:90px;height:80px;">
-            <button class="home"  onclick="openNav()"></button>
+            
+            <button class="home" onclick="document.querySelector('#home').scrollIntoView({block:'start',behavior:'smooth'})"></button></a>
         </span>
         <span  style="width:90px;height:80px;">
-            <button class="message" onclick="openNav()"></button>
+            
+            <button class="message"></button></a>
         </span>
         <span  style="width:7%;height:80px;float:right;">
             <button class="open" onclick="openNav()"></button>
         </span>
     </div>
+    <div class="welcome">
+        <a id="welcome"></a>
+        <div style="height:100px; width:100%"></div>
+        <div>
+            <span style="width:8%;height:800px;float:left;position:fixed">
+                <div style="height: 400px;"></div>
+                <button class="info" style="border:none;outline:none;transition:0.75s;height:30px;width:30px; margin: 10px auto 10px 30px;background:url(../image/qq.svg) no-repeat center center;" onclick="openNav()"></button>
+                <button class="info" style="border:none;outline:none;transition:0.75s;height:30px;width:30px; margin: 10px auto 10px 30px;background:url(../image/wechat.svg) no-repeat center center;" onclick="openNav()"></button>
+                <button class="info" style="border:none;outline:none;transition:0.75s;height:30px;width:30px; margin: 10px auto 10px 30px;background:url(../image/redgithub.svg) no-repeat center center;" onclick="openNav()"></button>
+            </span>
+            <span>
+                <p class="slogan1">Welcome!</p>
+                <p class="slogan2">Visitor  No.<?php echo ''.VisitorController::getMaxID();?></p>
+            </span>
+        </div>  
+    </div>
+    <div class="content1">
+        <a id="home"></a>
+        <div style="height: 90px; width:100%;"></div>
+        <div>
+            <p>你好，</p>
+            <p>我是<?php ?></p>
+        </div>
+    </div>
+    <div class="content2"></div>
+    
+
+
 
     <!--侧栏页面设计-->
     <div id="mySidenav" class="sidenav">
@@ -53,10 +83,7 @@ include "../controller/VisitorController.php";
             </div>
         </div>
     </div>
-    <div class="welcome">
-        <p class="pa" style="font-family: Arial, Helvetica, sans-serif; font-size:200px;">Welcome</p>
-        <a class="ax">我的第<?php echo ''.VisitorController::getMaxID();?>位访客</p>
-    </div>
+    
 
     
 

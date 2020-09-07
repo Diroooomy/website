@@ -1,26 +1,38 @@
 * {margin: 0 0 0 0;}
 .background{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scrollbar-color: #6da7bb;
+    background-color: #6da7bb;
+    position: relative;
     z-index: -1;
     background: url(../image/wall.jpg) no-repeat;
 }
-.home{
+.logo{
+    transition:1s;
     height: 80px;
-    width:120px;
-    margin-left:20px;
+    width:140px;
+    
     border:none;
     outline:none;
-    transition: 1s;
+    background:url(../image/welcome.svg) no-repeat center center
+}
+.logo:hover{
+    background-color:rgb(252, 250, 244);
+}
+.home{
+    height: 80px;
+    width:125px;
+    
+    border:none;
+    outline:none;
+    transition: 1s ease-out;
     background:url(../image/home.svg) no-repeat center center;
 }
 .home:hover{
     /* background-color: rgb(252, 250, 244); */
-    background-color:rgb(252, 250, 244);;
+    background-color:rgb(252, 250, 244);
 }
 .message{
     height:80px;
-    width:120px;
+    width:125px;
     margin:0;
     border:none;
     outline:none;
@@ -28,7 +40,7 @@
     background: url(../image/message.svg) no-repeat center center;
 }
 .message:hover{
-    background-color: rgb(252, 250, 244);;
+    background-color: rgb(252, 250, 244);
 }
 .open{
     
@@ -38,21 +50,43 @@
     margin: 20px auto 20px 38px;
     background:url(../image/list.svg);
 }
-.welcome{
-    height: 1120px;
-    width:700px;
-    margin: 0 auto;
-}
+
 
 
 .list{
+    z-index: 99;
     position: fixed;
     background-color: rgba(174, 185, 197, 0.781);
     height: 80px;
     width: 100%;
     font-size: 0;
 }
-
+.welcome{
+    position: relative;
+    height: 800px;
+    width:950px;
+    
+}
+.slogan1{
+    user-select: none;
+    padding-left:150px;
+    padding-top:60px; 
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:200px;
+    color:azure
+}
+.slogan2{
+    padding-left:250px;
+    user-select: none;
+    font-size: 50px;
+    font-family: STXinwei;
+    color: linen;
+    
+}
+.info:hover{
+    transform: scale(1.3,1.3);
+    cursor: pointer;
+}
 
 .sidebar{
     height: 100px;
@@ -176,4 +210,14 @@
 @media screen and (max-height: 450px) {
   .sidenav {padding-top: 15px;}
   .sidenav a {font-size: 18px;}
+}
+
+.content1{
+    height: 340px;
+    border: 0;
+}
+.content2{
+    height:1000px;
+    border: 0;
+    background-color: #6da7bb;
 }
