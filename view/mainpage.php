@@ -26,14 +26,14 @@ include "../controller/VisitorController.php";
         })
     </script>
     <div class="list">
-        <span style="float: left;">
-            <input type="image" src="../image/logo.png" style="height:80px;outline:none;cursor:default;">
+    <span  style="width:90px;height:80px;">
+            <button style="height: 80px;width:120px;margin-left:20px;border:none;outline:none;background:url(../image/welcome.svg) no-repeat center center" onclick="openNav()"></button>
         </span>
         <span  style="width:90px;height:80px;">
-            <button style="height: 80px;width:120px;margin:0;border:none;" onclick="openNav()"></button>
+            <button class="home"  onclick="openNav()"></button>
         </span>
         <span  style="width:90px;height:80px;">
-            <button style="height:80px;width:120px;margin:0;border:none;background: url(../image/person.svg) no-repeat center center;" onclick="openNav()"></button>
+            <button class="message" onclick="openNav()"></button>
         </span>
         <span  style="width:7%;height:80px;float:right;">
             <button class="open" onclick="openNav()"></button>
@@ -54,7 +54,7 @@ include "../controller/VisitorController.php";
         </div>
     </div>
     <div class="welcome">
-        <p class="pa" style="font-family: Arial, Helvetica, sans-serif; font-size:x-large">Welcome</p>
+        <p class="pa" style="font-family: Arial, Helvetica, sans-serif; font-size:200px;">Welcome</p>
         <a class="ax">我的第<?php echo ''.VisitorController::getMaxID();?>位访客</p>
     </div>
 

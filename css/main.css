@@ -1,21 +1,37 @@
 * {margin: 0 0 0 0;}
 .background{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
- 
+    scrollbar-color: #6da7bb;
     z-index: -1;
     background: url(../image/wall.jpg) no-repeat;
 }
-/* .logo{
-    background-color: #198eee;
+.home{
     height: 80px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: x-large;
-    font-weight: bold;
-    margin:0 0 0 0;
-} */
-
+    width:120px;
+    margin-left:20px;
+    border:none;
+    outline:none;
+    transition: 1s;
+    background:url(../image/home.svg) no-repeat center center;
+}
+.home:hover{
+    /* background-color: rgb(252, 250, 244); */
+    background-color:rgb(252, 250, 244);;
+}
+.message{
+    height:80px;
+    width:120px;
+    margin:0;
+    border:none;
+    outline:none;
+    transition: 1s;
+    background: url(../image/message.svg) no-repeat center center;
+}
+.message:hover{
+    background-color: rgb(252, 250, 244);;
+}
 .open{
-    position:fixed;
+    
     border:none;
     height:30px;
     width:30px;
@@ -23,16 +39,18 @@
     background:url(../image/list.svg);
 }
 .welcome{
-    height: 200px;
+    height: 1120px;
     width:700px;
     margin: 0 auto;
 }
 
 
 .list{
+    position: fixed;
     background-color: rgba(174, 185, 197, 0.781);
     height: 80px;
-    
+    width: 100%;
+    font-size: 0;
 }
 
 
