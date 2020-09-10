@@ -1,12 +1,32 @@
 <?php
-include '../database.php';
-include '../model/Visitor.php';
+include("../database.php");
+require("../model/Visitor.php");
 class VisitorController
 {
-    
-    public static function store($visitor)
+    protected $visitor;
+    function __construct($name)
+    {   
+        $this->visitor=new Visitor($name);
+        $sql = "select max(id) from visitor;";
+        $result=$GLOBALS['conn']->query($sql);
+        if (mysqli_num_rows($result) > 0) {
+            while ($row = mysqli_fetch_assoc($result)) {
+                $id = $row['max(id)']+1;
+            }
+        }
+        $this->visitor->setID($id);
+    }
+    public function index()
     {
-        $name = $visitor->getName();
+        $visitor=array(
+            'id' => $this->visitor->getID(),
+            'name' => $this->visitor->getName()
+        );
+        return $visitor;
+    }
+    public function store()
+    {
+        $name = $this->visitor->getName();
         $sql = "insert into visitor (name)  values ('$name');";
         try {
             $GLOBALS['conn']->query($sql);
@@ -15,9 +35,9 @@ class VisitorController
             return $e->getMessage();
         }
     }
-    public static function update($visitor,$newname)
+    public function update($newname)
     {
-        $name = $visitor->getName();
+        $name = $this->visitor->getName();
         $sql = "update visitor set name='$newname' where name='$name';";
         try {
             $GLOBALS['conn']->query($sql);
@@ -46,8 +66,9 @@ class VisitorController
     }
 }
 if (isset($_POST['name'])) {
-    $visitor = new Visitor($_POST['name']);
-    VisitorController::store($visitor);
+    $name = $_POST['name'];
+    $sql = "insert into visitor (name)  values ('$name');";
+    $conn->query($sql);
     header("refresh:0;url=../view/mainpage.php");
 }
 
