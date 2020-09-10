@@ -5,11 +5,20 @@ require("../controller/CommentController.php");
 $ad=new AdminController();
 $admin = $ad->index();
 $com=new CommentController();
+
+?>
+<?php
+if(isset($_POST['name']))
+{
+    $name = $_POST['name'];
+    $vi = new VisitorController($name);
+    $vi->store();
+}
 ?>
 <?php
 if(isset($_POST['com']))
 {
-    $name='匿名';
+    $name=$_POST['visitor'];
     $content=$_POST['com'];
     $com->setComment($name,$content);
     $com->store();
@@ -122,6 +131,7 @@ if(isset($_POST['com']))
         <p style=" font-family: SimSun;font-size:26px;font-weight:bold;margin-left:29%;">写新留言:</p>
         <div class="leave-m">
             <form name="form" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" onsubmit="return validate();">
+            <input type="hidden" name="visitor" value="<?php echo $name; ?>">
             <textarea name="com" id="com" placeholder="有什么想对我说的？畅所欲言吧"></textarea>
             <div >
             <p style="margin-left:20%;margin-right:25%;font-family: SimSun;color:gainsboro;">

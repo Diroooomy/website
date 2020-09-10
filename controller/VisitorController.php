@@ -65,10 +65,5 @@ class VisitorController
         }
     }
 }
-if (isset($_POST['name'])) {
-    $name = $_POST['name'];
-    $sql = "insert into visitor (name)  values ('$name');";
-    $conn->query($sql);
-    header("refresh:0;url=../view/mainpage.php");
-}
+
 
